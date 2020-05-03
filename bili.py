@@ -18,7 +18,7 @@ from PIL import Image
 from io import BytesIO
 
 USER = 'username'
-PASSWORD = ''
+PASSWORD = 'word'
 URL = 'https://passport.bilibili.com/login'
 BORDER = 6
 
@@ -72,10 +72,6 @@ class BiLi():
         '''恢复带缺口图片'''
         js = 'document.getElementsByClassName("geetest_canvas_fullbg")[0].setAttribute("style","display: none;")'
         self.driver.execute_script(js)
-<<<<<<< HEAD
-        
-=======
->>>>>>> 1190184... update bili.py
     def get_screenshot(self):
         '''获取页面截图'''
         screenshot = self.driver.get_screenshot_as_png()
@@ -210,11 +206,8 @@ class BiLi():
         print(success)
         time.sleep(1)
         if not success:
-<<<<<<< HEAD
             self.login()
         else:
-=======
->>>>>>> 1190184... update bili.py
             self.crack()
 if __name__ == '__main__':
     c = BiLi()
